@@ -14,7 +14,12 @@ $(document).ready(function(){
 						$('#table-body').empty();
 						$('#total-usd').text(result['portfolio']['usdValue'].toFixed(2));
 						$('#total-btc').text(result['portfolio']['btcValue'].toFixed(2));
-						$.each(result['positionList'], function( index, value ) {
+
+						$.each(result['positionList'].sort(
+						    function(obj1, obj2) {
+						        return obj2['holdingValueFiat'] - obj1['holdingValueFiat'];
+                            }),
+                            function( index, value ) {
 							var html_text = ('<tr>' + 
 							'<td class="coin">' + '<img src="' + value['coinUrl'] + '">' + '<br/>' + value['coin'] +  '</td>' + 
 							'<td class="holdings">'+ value['fiatSymbol'] + value['holdingValueFiat'].toFixed(2) + '<br/>' + value['quantity'] + '</td>' + 

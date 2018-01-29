@@ -1,8 +1,7 @@
 {
   "manifest_version": 2,
-
   "name": "Blockfolio chrome extension",
-  "description": "Blockfolio chrome extension description.",
+  "description": "Google Chrome extension which allows you to browse Blockfolio inside a browser.",
   "version": "1.0",
   "options_page": "options.html",
   "background": {

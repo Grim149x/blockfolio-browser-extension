@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head><title>Blockfolio Options</title></head>
+<head>
+    <title>Blockfolio Options</title>
+</head>
 <body>
+    Blockfolio API key.
+    <div>
+        <textarea id="api-key" style="width:370px; height:100px; resize: none;"></textarea>
+    </div>
 
+    Refresh interval (seconds).
+    <div>
+        <input id="refresh-interval">
+    </div>
 
-Blockfolio API key.
- <div>
-  <textarea id="api-key" style="width:370px; height:100px; resize: none;"></textarea>
-</div>
+    <div id="status"></div>
+    <button id="save">Save</button>
 
-Refresh interval (seconds).
-<div>
-  <input id="refresh-interval">
-</div>
-
-<div id="status"></div>
-<button id="save">Save</button>
-
-<script src="js/options.js"></script>
+    <script src="js/options.js"></script>
 </body>
 </html>

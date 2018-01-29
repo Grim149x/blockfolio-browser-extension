@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	function updatePortfolio(){
+    function updatePortfolio(){
 		chrome.storage.sync.get({
 			apiKey: '',
 			refreshInterval: 30
@@ -28,6 +28,5 @@ $(document).ready(function(){
 			});
 		})
 	}
-
 	setTimeout(updatePortfolio, 0);
 });

@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
 <style type="text/css">
-	#mainPopup {
-		padding: 3px;
-		height: 500px;
-		width: 270px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	total {
-		font-size: 1.5em;
-		padding: 10px;
-	}
-@import url(https://fonts.googleapis.com/css?family=Roboto:400);
+#mainPopup {
+	padding: 3px;
+	height: 500px;
+	width: 270px;
+	line-height: 1.3;
+}
 
 
 body {
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-size: 0.8em;
 }
 
@@ -49,16 +45,22 @@ table {
 	//border-spacing: 0;
 	table-layout: fixed;
 }
+
+.total {
+	font-size: 1.5em;
+	padding: 10px;
+}
+
 .coin{
-text-align: center;
+	text-align: center;
 }
 
 .holdings{
-line-height: 1.5;
+	line-height: 1.5;
 }
 
 .price{
-line-height: 1.5;
+	line-height: 1.5;
 }
 
 .down{
@@ -71,21 +73,24 @@ line-height: 1.5;
 
 .neutral{
 }
-
 </style>
+
 <body>
 <div id="mainPopup">
-<total> $<span id="total-usd"></span> (<span id="total-btc"></span>)</total>
-<table>
-   <thead>
-    <tr>
-      <th scope="col" style="width: 36px; ">Coin</th>
-      <th scope="col" style="text-align: right;">Holdings</th>
-      <th scope="col">Price</th>
-    </tr>
-  </thead>
-  <tbody id="table-body"></tbody>
-</table>
+    <div class="total"> 
+		$<span id="total-usd"></span><br/>
+		&#3647;<span id="total-btc"></span>
+	</div>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col" style="width: 36px; text-align: center;">Coin</th>
+                <th scope="col" style="text-align: right;">Holdings</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
 </div>
 
 <script src="js/jquery-3.3.1.min.js"></script>

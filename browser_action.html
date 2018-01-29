@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	#mainPopup {
+		padding: 3px;
+		height: 500px;
+		width: 270px;
+		font-family: Helvetica, Ubuntu, Arial, sans-serif;
+	}
+	total {
+		font-size: 1.5em;
+		padding: 10px;
+	}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400);
+
+
+body {
+	font-family: 'Roboto';
+	font-size: 0.8em;
+}
+
+img {
+	width: 18px;
+}
+
+
+th, td {
+	overflow: hidden;
+	text-align: right;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 5px;
+	//font-weight: bold;
+	//width: 5em;
+	//word-wrap: break-word;
+}
+
+th {
+	padding: 5px;
+}
+
+tr {	
+	border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	//border-spacing: 0;
+	table-layout: fixed;
+}
+.coin{
+text-align: center;
+}
+
+.holdings{
+line-height: 1.5;
+}
+
+.price{
+line-height: 1.5;
+}
+
+.down{
+	color: red;
+}
+
+.up{
+	color:green
+}
+
+.neutral{
+}
+
+</style>
+<body>
+<div id="mainPopup">
+<total> $<span id="total-usd"></span> (<span id="total-btc"></span>)</total>
+<table>
+   <thead>
+    <tr>
+      <th scope="col" style="width: 36px; ">Coin</th>
+      <th scope="col" style="text-align: right;">Holdings</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody id="table-body"></tbody>
+</table>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/browser_action.js"></script>
+
+</body>
+</html>

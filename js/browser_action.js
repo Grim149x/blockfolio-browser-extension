@@ -14,6 +14,8 @@ $(document).ready(function(){
 						$('#table-body').empty();
 						$('#total-usd').text(result['portfolio']['usdValue'].toFixed(2));
 						$('#total-btc').text(result['portfolio']['btcValue'].toFixed(2));
+						$('#ChangeFiat').text(result['portfolio']['twentyFourHourPercentChangeFiat'].toFixed(2));
+						$('#ChangeBtc').text(result['portfolio']['twentyFourHourPercentChangeBtc'].toFixed(2));
 
 						$.each(result['positionList'].sort(
 						    function(obj1, obj2) {

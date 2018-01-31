@@ -51,6 +51,16 @@ table {
 	padding: 10px;
 }
 
+.totalusd{
+	display:inline-block;
+}
+
+.totalpercent{
+	display:inline-block;
+	float:right;
+	text-align: right;
+}
+
 .coin{
 	text-align: center;
 }
@@ -74,12 +84,18 @@ table {
 .neutral{
 }
 </style>
-
 <body>
 <div id="mainPopup">
-    <div class="total"> 
-		$<span id="total-usd"></span><br/>
-		&#3647;<span id="total-btc"></span>
+    <div class="total">
+		<div class="totalusd">
+			$<span id="total-usd"></span><br/>
+			&#3647;<span id="total-btc"></span>
+		</div>
+		<div class="totalpercent">
+			<span id="ChangeFiat"></span>%<br/>
+			<span id="ChangeBtc"></span>%
+			
+		</div>
 	</div>
     <table>
         <thead>

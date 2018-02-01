@@ -1,7 +1,8 @@
 function updatePortfolio(){
 	chrome.storage.sync.get({
 		apiKey: '',
-		refreshInterval: 30
+		refreshInterval: 30,
+		fiatMode: false
 	}, function(items) {
 		var api_url = 'https://api-v0.blockfolio.com/rest/get_all_positions/' + items.apiKey;
 		
@@ -23,10 +24,15 @@ function updatePortfolio(){
 						return obj2['holdingValueFiat'] - obj1['holdingValueFiat'];
 					}),
 					function( index, value ) {
+					var price_html = items.fiatMode ? (
+						value['fiatSymbol'] + value['lastPriceFiat'].toFixed(5) + '<br/><span class="' + value['arrow'] +'">' + value['twentyFourHourPercentChangeFiat'].toFixed(2) +'%</span>'
+					) : (
+						value['symbol'] + value['lastPrice'].toFixed(5) + '<br/><span class="' + value['arrow'] +'">' + value['twentyFourHourPercentChange'].toFixed(2) +'%</span>'
+					)
 					var html_text = ('<tr>' + 
 					'<td class="coin">' + '<img src="' + value['coinUrl'] + '">' + '<br/>' + value['coin'] +  '</td>' + 
-					'<td class="price">' + value['fiatSymbol'] + value['lastPriceFiat'].toFixed(3) + '<br/><span class="' + value['arrow'] +'">' + value['twentyFourHourPercentChange'].toFixed(2) +'%</span></td>' + 
 					'<td class="holdings">'+ value['fiatSymbol'] + value['holdingValueFiat'].toFixed(2) + '<br/>' + Number(value['quantity'].toFixed(10)) + '</td>' + 
+					'<td class="price">' + price_html +'</td>' + 
 					'</tr>');
 					$('#table-body').append(html_text);
 				})
@@ -35,6 +41,18 @@ function updatePortfolio(){
 	})
 }
 
-$(document).ready(function(){
+function toggleFiat(){
+	chrome.storage.sync.get({fiatMode:false}, function(items) {
+		chrome.storage.sync.set({
+			fiatMode: !items.fiatMode
+		}, function (){
+			updatePortfolio()
+		})
+	})
+}
+
+$(document).ready(function(){	
+	$('#total-usd').click(toggleFiat)	
+	$('#total-btc').click(toggleFiat)
 	updatePortfolio();
 })

@@ -25,8 +25,8 @@ function updatePortfolio(){
 					function( index, value ) {
 					var html_text = ('<tr>' + 
 					'<td class="coin">' + '<img src="' + value['coinUrl'] + '">' + '<br/>' + value['coin'] +  '</td>' + 
-					'<td class="holdings">'+ value['fiatSymbol'] + value['holdingValueFiat'].toFixed(2) + '<br/>' + value['quantity'] + '</td>' + 
 					'<td class="price">' + value['fiatSymbol'] + value['lastPriceFiat'].toFixed(3) + '<br/><span class="' + value['arrow'] +'">' + value['twentyFourHourPercentChange'].toFixed(2) +'%</span></td>' + 
+					'<td class="holdings">'+ value['fiatSymbol'] + value['holdingValueFiat'].toFixed(2) + '<br/>' + Number(value['quantity'].toFixed(10)) + '</td>' + 
 					'</tr>');
 					$('#table-body').append(html_text);
 				})

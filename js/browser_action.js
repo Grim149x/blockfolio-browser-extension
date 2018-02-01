@@ -25,9 +25,9 @@ function updatePortfolio(){
 					}),
 					function( index, value ) {
 					var price_html = items.fiatMode ? (
-						value['fiatSymbol'] + Number(value['lastPriceFiat'].toFixed(5)) + '<br/><span class="' + value['arrow'] +'">' + value['twentyFourHourPercentChangeFiat'].toFixed(2) +'%</span>'
+						value['fiatSymbol'] + Number(value['lastPriceFiat'].toFixed(5)) + '<br/><span class="' + (value['twentyFourHourPercentChangeFiat'] > 0 ? 'up' : 'down') +'">' + value['twentyFourHourPercentChangeFiat'].toFixed(2) +'%</span>'
 					) : (
-						value['symbol'] + Number(value['lastPrice'].toFixed(7)) + '<br/><span class="' + value['arrow'] +'">' + value['twentyFourHourPercentChange'].toFixed(2) +'%</span>'
+						value['symbol'] + Number(value['lastPrice'].toFixed(7)) + '<br/><span class="' + (value['twentyFourHourPercentChange'] > 0 ? 'up' : 'down') +'">' + value['twentyFourHourPercentChange'].toFixed(2) +'%</span>'
 					)
 					var html_text = ('<tr>' + 
 					'<td class="coin">' + '<img src="' + value['coinUrl'] + '">' + '<br/>' + value['coin'] +  '</td>' + 

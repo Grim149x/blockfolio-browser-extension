@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Blockfolio browser extension",
+  "description": "Unofficial browser extension which allows you to browse Blockfolio inside a browser.",
+  "version": "1.2",
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["js/jquery-3.3.1.min.js", "js/background.js"],
+    "persistent": true
+  },
+  "icons": { 
+    "16": "btc_icon_16.png",
+    "48": "btc_icon_48.png",
+    "128": "btc_icon_128.png" 
+  },
+  "browser_action": {
+    "default_icon": "btc_icon_48.png",
+    "default_popup": "popup.html"
+  },
+  
+  "permissions": [
+    "activeTab",
+    "storage",
+	"https://*.blockfolio.com/*"
+  ]
+}

@@ -1,26 +1,34 @@
 {
   "manifest_version": 2,
-  "name": "Blockfolio chrome extension",
-  "description": "Unofficial Google Chrome extension which allows you to browse Blockfolio inside a browser.",
-  "version": "1.1",
-  "options_page": "options.html",
-  "background": {
-    "scripts": ["js/jquery-3.3.1.min.js", "js/background.js"],
-    "persistent": true
+  "name": "Blockfolio browser extension",
+  "description": "Unofficial browser extension which allows you to browse Blockfolio inside a browser.",
+  "version": "1.2",
+  "options_ui": {
+    "page": "options.html"
   },
-  "icons": { 
+  "background": {
+    "scripts": [
+      "js/jquery-3.3.1.min.js",
+      "js/background.js"
+    ]
+  },
+  "icons": {
     "16": "btc_icon_16.png",
     "48": "btc_icon_48.png",
-    "128": "btc_icon_128.png" 
+    "128": "btc_icon_128.png"
   },
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "browser_action.html"
+    "default_icon": "btc_icon_48.png",
+    "default_popup": "popup.html"
   },
-  
   "permissions": [
     "activeTab",
     "storage",
-	"https://*.blockfolio.com/*"
-  ]
+    "https://*.blockfolio.com/*"
+  ],
+  "applications": {
+    "gecko": {
+      "id": "addon@example.com"
+    }
+  }
 }

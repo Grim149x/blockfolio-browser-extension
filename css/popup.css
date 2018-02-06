@@ -1,3 +1,4 @@
+/* TODO NO IDEA IF WE NEED THIS OR NOT
 .tools {
     min-width: 770px;
 }
@@ -27,3 +28,134 @@
     background-color: #dff0d8;
     border-color: #d6e9c6;
 }
+*/
+
+
+
+#mainPopup {
+    padding: 0px;
+    /*height: 500px;
+    //width: 270px;*/
+    line-height: 1.3;
+    overflow: hidden;
+}
+
+#error-message {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 200px;
+    width: 100%;
+    line-height: 20px;
+}
+
+#spinner {
+    position: fixed;
+    left: calc(50% - 16px);
+    top: calc(50% - 16px);
+}
+
+#spinner img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    overflow:hidden;
+    height: 500px;
+    width: 270px;
+}
+
+img {
+    width: 18px;
+}
+
+
+th, td {
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 5px;
+    //font-weight: bold;
+    //width: 5em;
+    //word-wrap: break-word;
+}
+
+th {
+    padding: 5px;
+}
+
+tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    //border-spacing: 0;
+    table-layout: fixed;
+}
+
+.total {
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+.total-values{
+    cursor: pointer;
+    display:inline-block;
+}
+
+.totalpercent{
+    display:inline-block;
+    float:right;
+    text-align: right;
+}
+
+.coin{
+    text-align: center;
+}
+
+.holdings{
+    line-height: 1.5;
+}
+
+.price{
+    line-height: 1.5;
+}
+
+.down{
+    color: red;
+}
+
+.up{
+    color:green
+}
+
+.neutral{
+}
+
+.scroll {
+  overflow: auto;
+  float: left;
+
+}
+
+.content {
+  height: 500px;
+  padding-right: 5px;
+}
+/*
+.scroll1::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll1::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.scroll1::-webkit-scrollbar-thumb {
+  background: #eee;
+}*/

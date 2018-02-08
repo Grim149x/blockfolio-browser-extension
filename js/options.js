@@ -1,6 +1,6 @@
 function save_options() {
-    var refresh_interval = document.getElementById('refresh-interval').value;
-    var api_key = document.getElementById('api-key').value;
+    var refresh_interval = document.getElementById('refresh-interval').value.trim();
+    var api_key = document.getElementById('api-key').value.trim();
   
     chrome.storage.sync.set({
         apiKey: api_key,

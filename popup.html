@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+</head>
+<body>
+
+<div id="scroll">
+    <div class="content">
+        <div id="spinner" style="display: none;">
+            <img src="img/spinner.svg">
+        </div>
+
+        <div id="error-message" style="display: none;"></div>
+
+        <div id="mainPopup" style="display: none;">
+            <div class="total">
+                <div class="total-values">
+                    $ <span id="total-usd"></span><br/>
+                    &#3647; <span id="total-btc"></span>
+                </div>
+                <div class="totalpercent">
+                    <span id="ChangeFiat"></span>%<br/>
+                    <span id="ChangeBtc"></span>%
+                </div>
+            </div>
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col" style="width: 40px; text-align: center;">
+                        Coin
+                    </th>
+                    <th scope="col" style="text-align: right;">Holdings</th>
+                    <th scope="col">Price</th>
+                </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/perfect-scrollbar.min.js"></script>
+<script src="js/popup.js"></script>
+
+</body>
+</html>

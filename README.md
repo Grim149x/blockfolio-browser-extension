@@ -20,13 +20,15 @@ Blockfolio Browser Extension is licensed under the GNU GPL.
 See LICENSE for more information.
 
 Third party libraries are licensed separately.
+
 Twitter Bootstrap, which is distributed under the Apache 2.0 license.
 Source: https://github.com/twitter/bootstrap
 
 jQuery, which is distributed under the MIT License.
 Source: https://github.com/jquery/jquery
 
-Perfect-scrollbar: https://github.com/utatti/perfect-scrollbar
+Perfect-scrollbar, which is distributed under the MIT License.
+Source: https://github.com/utatti/perfect-scrollbar
 
 ## Contacts
 de.lsnk@gmail.com

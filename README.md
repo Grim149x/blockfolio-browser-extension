@@ -27,3 +27,6 @@ jQuery, which is distributed under the MIT License.
 Source: https://github.com/jquery/jquery
 
 Perfect-scrollbar: https://github.com/utatti/perfect-scrollbar
+
+## Contacts
+de.lsnk@gmail.com

@@ -5,6 +5,7 @@ Unofficial Google Chrome and Firefox extension which allows you to browse Blockf
 
 ## Download
 [Chrome web store](https://chrome.google.com/webstore/detail/blockfolio-chrome-extensi/enfaoeheompklbhoobagnmadoenifaac)
+
 [Firefox addon](https://addons.mozilla.org/addon/blockfolio-browser-extension/)
 
 ## Manual (Developer) Installation
